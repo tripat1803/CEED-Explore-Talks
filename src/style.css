@@ -1,7 +1,47 @@
+:root {
+  --text-color-1: #0f0f0f;
+  --text-color-2: #727272;
+  --text-color-3: #636363;
+  --text-color-4: #393939;
+  --text-color-5: #363636;
+  --main-color-1: #f4792a;
+  --main-color-2: #2385c7;
+  --main-color-3: #f4792a;
+  --main-color-4: #000;
+  --bg-color-1: #ffffff;
+  --bg-color-2: #cfcfcf;
+
+  /* --text-color-1: #ffffff;
+  --text-color-2: #dad4b5;
+  --text-color-3: #dad4b5;
+  --text-color-4: #f2e8c6;
+  --text-color-5: #f2e8c6;
+  --main-color-1: #dac0a3;
+  --main-color-2: #dac0a3;
+  --main-color-3: #f4792a;
+  --bg-color-1: #952323;
+  --bg-color-2: #a73121; */
+
+  /* --text-color-1: #ffffff;
+  --text-color-2: #5c8374;
+  --text-color-3: #5c8374;
+  --text-color-4: #93b1a6;
+  --text-color-5: #93b1a6;
+  --main-color-1: #a2c579;
+  --main-color-2: #a2c579;
+  --main-color-3: #016a70;
+  --bg-color-1: #040d12;
+  --bg-color-2: #183d3d; */
+}
+
+body {
+  background-color: var(--bg-color-1);
+}
+
 a,
 a:focus,
 a:hover {
-  color: #000000;
+  color: var(--text-color-1);
 }
 a:hover {
   text-decoration: none;
@@ -14,6 +54,7 @@ ol {
   list-style: none;
 }
 
+/* Navbar */
 #navbar {
   position: absolute;
   padding: 0;
@@ -27,8 +68,97 @@ ol {
   justify-content: end;
 }
 
+/* Home Page */
+@keyframes home-idea-bulb {
+  0% {
+    background-image: url("../public/Idea\ Bulb\ 1.png");
+  }
+  30% {
+    background-image: url("../public/Idea\ Bulb\ 1.png");
+  }
+  35% {
+    background-image: url("../public/Idea\ Bulb\ 2.png");
+  }
+  40% {
+    background-image: url("../public/Idea\ Bulb\ 1.png");
+  }
+  45% {
+    background-image: url("../public/Idea\ Bulb\ 2.png");
+  }
+  50% {
+    background-image: url("../public/Idea\ Bulb\ 1.png");
+  }
+  55% {
+    background-image: url("../public/Idea\ Bulb\ 2.png");
+  }
+  60% {
+    background-image: url("../public/Idea\ Bulb\ 1.png");
+  }
+  65% {
+    background-image: url("../public/Idea\ Bulb\ 2.png");
+  }
+  98% {
+    background-image: url("../public/Idea\ Bulb\ 2.png");
+  }
+  100% {
+    background-image: url("../public/Idea\ Bulb\ 1.png");
+  }
+}
+
+#start {
+  height: 70vh;
+}
+@media (min-width: 576px) {
+  #start {
+    height: 80vh;
+  }
+}
+@media (min-width: 768px) {
+  #start {
+    height: 100vh;
+  }
+}
+
+#start .idea-bulb {
+  background-image: url("../public/Idea\ Bulb\ 1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10vw;
+  height: 10vw;
+  margin-right: 5%;
+  animation-name: home-idea-bulb;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+#start .start-title {
+  padding: 0;
+  padding-top: 25%;
+}
+@media (min-width: 576px) {
+  #start .start-title {
+    padding-top: 20%;
+  }
+}
+@media (min-width: 768px) {
+  #start .start-title {
+    padding-top: 15%;
+  }
+}
+@media (min-width: 1200px) {
+  #start .start-title {
+    padding-top: 10%;
+  }
+}
+@media (min-width: 1400px) {
+  #start .start-title {
+    padding-top: 5%;
+  }
+}
+
+/* Main Footer */
 .main-footer {
-  color: rgba(0, 0, 0, 0.75);
+  color: var(--text-color-1);
 }
 .main-footer .container-fluid {
   padding-right: 50px;
@@ -39,7 +169,7 @@ ol {
   font-size: 16px;
   font-weight: 600;
   line-height: 28px;
-  color: #636363;
+  color: var(--text-color-3);
 }
 
 .footer-top {
@@ -68,7 +198,7 @@ ol {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  color: #393939;
+  color: var(--text-color-4);
   text-transform: capitalize;
 }
 
@@ -79,7 +209,7 @@ ol {
 .footer-bottom {
   display: flex;
   padding: 25px 0;
-  border-top: 1px solid #cfcfcf;
+  border-top: 1px solid var(--bg-color-2);
   justify-content: space-between;
 }
 
@@ -96,7 +226,7 @@ ol {
 }
 
 .copyright-wrapper {
-  color: #0f0f0f;
+  color: var(--text-color-1);
   font-family: montserrat, sans-serif;
   font-size: 14px;
   font-weight: 400;

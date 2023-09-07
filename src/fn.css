@@ -1,0 +1,155 @@
+.font-size-1 {
+  font-size: 0.5rem;
+}
+.font-size-2 {
+  font-size: 1rem;
+}
+.font-size-3 {
+  font-size: 2rem;
+}
+.font-size-4 {
+  font-size: 4rem;
+}
+.font-size-5 {
+  font-size: 6rem;
+}
+.font-size-6 {
+  font-size: 8rem;
+}
+.font-size-7 {
+  font-size: 10rem;
+}
+.font-size-8 {
+  font-size: 12rem;
+}
+
+@media (min-width: 576px) {
+  .font-size-sm-1 {
+    font-size: 0.5rem;
+  }
+  .font-size-sm-2 {
+    font-size: 1rem;
+  }
+  .font-size-sm-3 {
+    font-size: 2rem;
+  }
+  .font-size-sm-4 {
+    font-size: 4rem;
+  }
+  .font-size-sm-5 {
+    font-size: 6rem;
+  }
+  .font-size-sm-6 {
+    font-size: 8rem;
+  }
+  .font-size-sm-7 {
+    font-size: 10rem;
+  }
+  .font-size-sm-8 {
+    font-size: 12rem;
+  }
+}
+@media (min-width: 768px) {
+  .font-size-md-1 {
+    font-size: 0.5rem;
+  }
+  .font-size-md-2 {
+    font-size: 1rem;
+  }
+  .font-size-md-3 {
+    font-size: 2rem;
+  }
+  .font-size-md-4 {
+    font-size: 4rem;
+  }
+  .font-size-md-5 {
+    font-size: 6rem;
+  }
+  .font-size-md-6 {
+    font-size: 8rem;
+  }
+  .font-size-md-7 {
+    font-size: 10rem;
+  }
+  .font-size-md-8 {
+    font-size: 12rem;
+  }
+}
+@media (min-width: 992px) {
+  .font-size-lg-1 {
+    font-size: 0.5rem;
+  }
+  .font-size-lg-2 {
+    font-size: 1rem;
+  }
+  .font-size-lg-3 {
+    font-size: 2rem;
+  }
+  .font-size-lg-4 {
+    font-size: 4rem;
+  }
+  .font-size-lg-5 {
+    font-size: 6rem;
+  }
+  .font-size-lg-6 {
+    font-size: 8rem;
+  }
+  .font-size-lg-7 {
+    font-size: 10rem;
+  }
+  .font-size-lg-8 {
+    font-size: 12rem;
+  }
+}
+@media (min-width: 1200px) {
+  .font-size-xl-1 {
+    font-size: 0.5rem;
+  }
+  .font-size-xl-2 {
+    font-size: 1rem;
+  }
+  .font-size-xl-3 {
+    font-size: 2rem;
+  }
+  .font-size-xl-4 {
+    font-size: 4rem;
+  }
+  .font-size-xl-5 {
+    font-size: 6rem;
+  }
+  .font-size-xl-6 {
+    font-size: 8rem;
+  }
+  .font-size-xl-7 {
+    font-size: 10rem;
+  }
+  .font-size-xl-8 {
+    font-size: 12rem;
+  }
+}
+@media (min-width: 1400px) {
+  .font-size-xxl-1 {
+    font-size: 0.5rem;
+  }
+  .font-size-xxl-2 {
+    font-size: 1rem;
+  }
+  .font-size-xxl-3 {
+    font-size: 2rem;
+  }
+  .font-size-xxl-4 {
+    font-size: 4rem;
+  }
+  .font-size-xxl-5 {
+    font-size: 6rem;
+  }
+  .font-size-xxl-6 {
+    font-size: 8rem;
+  }
+  .font-size-xxl-7 {
+    font-size: 10rem;
+  }
+  .font-size-xxl-8 {
+    font-size: 12rem;
+  }
+}
