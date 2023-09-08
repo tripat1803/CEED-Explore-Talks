@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
     <link href="src/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="src/fn.css" rel="stylesheet" />
     <link href="src/style.css" rel="stylesheet" />
@@ -10,7 +14,7 @@
   </head>
   <body>
     <div id="navbar" class="container-fluid hidden">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#"><img src="." />Navbar</a>
 
         <button
@@ -30,9 +34,10 @@
             <a class="nav-item nav-link active" href="#"
               >Home <span class="sr-only">(current)</span></a
             >
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            <a class="nav-item nav-link" href="#event-details">Event</a>
+            <!-- <a class="nav-item nav-link" href="#past-events">Past Events</a> -->
+            <a class="nav-item nav-link" href="#aboutus">About Us</a>
+            <a class="nav-item nav-link" href="#contactus">Contact Us</a>
           </div>
         </div>
       </nav>
@@ -40,39 +45,267 @@
 
     <div id="start" class="container-fluid">
       <div style="height: 0" class="start-padding"></div>
-      <div class="container-fluid start-title">
+      <div class="container-fluid start-title text-center">
         <div class="d-flex justify-content-center align-items-center">
-          <div class="idea-bulb"></div>
-          <h1 class="" style="font-size: 4vw">
+          <div style="position: absolute; left: 27%">
+            <div class="idea-bulb"></div>
+          </div>
+          <h1 class="" style="font-size: 4vw; font-weight: bolder">
             All you<br />
             need is to
           </h1>
         </div>
         <span
-          class="font-weight-normal text-center d-block"
-          style="font-size: 12vw; color: var(--main-color-1)"
+          class="font-weight-normal d-block"
+          style="
+            position: relative;
+            top: -3vw;
+            font-size: 12vw;
+            color: var(--main-color-1);
+          "
           >Explore</span
         >
-        <p class="text-center" style="font-size: 2vw">
-          The Spirit of Entrepreneurship
-        </p>
+        <p class="" style="font-size: 2vw">The Spirit of Entrepreneurship</p>
+      </div>
+    </div>
+
+    <div id="mission-statement">
+      <h1>
+        This is an Initiative Event with the sole aim of Initializing an Impact
+        through <span>Creating Synergy</span> between
+        <span>Industry, Entrepreneurship, Academia and Innovation</span> with
+        Entrepreneurship and <br />
+        Innovation playing a Pivotal role in <br />framing its
+        <span>Destiny</span>.
+      </h1>
+    </div>
+
+    <div id="event-details" class="container-fluid">
+      <div style="margin: 0 2%; width: 50%; flex-grow: 1">
+        <div class="event-detail-card">
+          <div style="padding-top: 10%; text-align: center">
+            <div class="event-detail-card-title d-flex">
+              <h1>Explore <br />Talks</h1>
+              <div style="flex-grow: 1"></div>
+              <div class="arrow">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="margin-top: 3px"
+                >
+                  <path
+                    d="M10 23.3953L23.4041 9.99121"
+                    stroke="white"
+                    stroke-width="3.17322"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 9.99121H23.4041V23.3953"
+                    stroke="white"
+                    stroke-width="3.17322"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <p>Exploring potential and Empowering Leadership</p>
+            </div>
+          </div>
+        </div>
+        <div style="height: 1px; background-color: var(--text-color-3)"></div>
+        <div class="event-detail-card">
+          <div style="padding-top: 10%; text-align: center">
+            <div class="event-detail-card-title d-flex">
+              <h1>CEED <br />Symphony</h1>
+              <div style="flex-grow: 1"></div>
+              <div class="arrow">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="margin-top: 3px"
+                >
+                  <path
+                    d="M10 23.3953L23.4041 9.99121"
+                    stroke="white"
+                    stroke-width="3.17322"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 9.99121H23.4041V23.3953"
+                    stroke="white"
+                    stroke-width="3.17322"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <p>
+                Partner with us to create exclusive content, strengthen your
+                brand presence, and reach the next billion users.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 1px; background-color: var(--text-color-3)"></div>
+      <div style="margin: 0 2%; width: 50%; flex-grow: 1">
+        <div class="event-detail-card">
+          <div style="padding-top: 10%; text-align: center">
+            <div class="event-detail-card-title d-flex">
+              <h1>CEED <br />Spotlight</h1>
+              <div style="flex-grow: 1"></div>
+              <div class="arrow">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="margin-top: 3px"
+                >
+                  <path
+                    d="M10 23.3953L23.4041 9.99121"
+                    stroke="white"
+                    stroke-width="3.17322"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 9.99121H23.4041V23.3953"
+                    stroke="white"
+                    stroke-width="3.17322"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <p>
+                Learn to speak in English confidently, build new skills, and
+                unlock better career opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="height: 1px; background-color: var(--text-color-3)"></div>
+        <div class="event-detail-card">
+          <div style="padding-top: 10%; text-align: center">
+            <div class="event-detail-card-title d-flex">
+              <h1>Explore <br />Glimpses</h1>
+              <div style="flex-grow: 1"></div>
+              <div class="arrow">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="margin-top: 3px"
+                >
+                  <path
+                    d="M10 23.3953L23.4041 9.99121"
+                    stroke="white"
+                    stroke-width="3.17322"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 9.99121H23.4041V23.3953"
+                    stroke="white"
+                    stroke-width="3.17322"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <p>The Past Events that have been held.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="event" class="container-fluid">
-      <h1>The Next Event to be held.</h1>
+      <div class="event-guest">
+        <h1 class="text-center" style="padding-top: 20%">
+          Upcomming <br />Event
+        </h1>
+      </div>
     </div>
 
-    <div id="pastEvents" class="container-fluid">
+    <!-- <div id="past-events" class="container-fluid">
       <h1>The Past Events that have been held.</h1>
+    </div> -->
+
+    <div id="aboutus">
+      <h1 class="text-center">
+        <img src="./public/ceed_logo.png" width="150" height="90" /> is on the
+        mission to <span>explore entrepreneurial potential</span> by creating a
+        platform that effectively nurtures the
+        <span>Global entrepreneurs</span>.
+      </h1>
     </div>
 
-    <div id="aboutus" class="container-fluid">
-      <h1>Details about the Event.</h1>
-    </div>
-
-    <div id="organizers" class="container-fluid">
-      <h1>The Organizers that have held the Event.</h1>
+    <div id="organizers">
+      <div class="organizers-view">
+        <div class="organizer-list d-flex">
+          <div class="organizer-card">
+            <img src="." />
+            <p></p>
+            <span></span>
+          </div>
+          <div class="organizer-card">
+            <img src="." />
+            <p></p>
+            <span></span>
+          </div>
+          <div class="organizer-card">
+            <img src="." />
+            <p></p>
+            <span></span>
+          </div>
+          <div class="organizer-card">
+            <img src="." />
+            <p></p>
+            <span></span>
+          </div>
+          <div class="organizer-card">
+            <img src="." />
+            <p></p>
+            <span></span>
+          </div>
+          <div class="organizer-card">
+            <img src="." />
+            <p></p>
+            <span></span>
+          </div>
+          <div class="organizer-card">
+            <img src="." />
+            <p></p>
+            <span></span>
+          </div>
+          <div class="organizer-card">
+            <img src="." />
+            <p></p>
+            <span></span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer id="contactus" class="main-footer mt-auto">
