@@ -39,6 +39,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background-color: var(--bg-color-1);
 }
 
@@ -88,6 +89,7 @@ h6 {
 
 #navbarLinks a {
   padding: 1rem 2rem;
+  font-size: 1.5rem;
 }
 
 /* Home Page */
@@ -129,6 +131,7 @@ h6 {
 
 #start {
   height: 70vh;
+  font-family: "Domine", sans-serif;
 }
 @media (min-width: 576px) {
   #start {
@@ -142,10 +145,12 @@ h6 {
 }
 
 #start h1 {
+  font-family: "Domine", sans-serif;
   color: var(--text-color-1);
 }
 
 #start p {
+  font-family: "Domine", sans-serif;
   color: var(--text-color-2);
 }
 
@@ -186,18 +191,20 @@ h6 {
 }
 @media (min-width: 1400px) {
   #start .start-title {
-    padding-top: 3%;
+    padding-top: 5%;
   }
 }
 
 /* Mission Statement */
 #mission-statement {
+  font-family: "Sorts Mill Goudy", sans-serif;
   background-color: var(--bg-color-2);
   color: var(--text-color-1);
 }
 
 #mission-statement h1 {
-  font-size: 2rem;
+  font-family: "Sorts Mill Goudy", sans-serif;
+  font-size: 2.25vw;
   text-align: center;
   margin: 0 10%;
   padding: 10% 0;
@@ -221,6 +228,11 @@ h6 {
   background-color: var(--bg-color-1);
 }
 
+#event-details .main-divider {
+  width: 1px;
+  background-color: var(--text-color-3);
+}
+
 #event-details .event-detail-card {
   height: 50%;
   padding: 5% 15%;
@@ -231,18 +243,25 @@ h6 {
   scale: 1.05;
 }
 
+#event-details .event-detail-card .event-detail-card_div {
+  padding-top: 10%;
+  text-align: center;
+}
+
 #event-details .event-detail-card-title {
   justify-content: center;
 }
 
 #event-details .event-detail-card h1 {
+  font-family: "Black Ops One", sans-serif;
   color: var(--text-color-1);
   text-align: left;
-  font-size: 2rem;
+  font-size: 2.5vw;
   font-weight: 900;
 }
 
 #event-details .event-detail-card p {
+  font-size: 1.2vw;
   text-align: left;
   color: var(--text-color-2);
 }
@@ -257,6 +276,18 @@ h6 {
 }
 #event-details .event-detail-card .arrow:first-child {
   background-color: var(--main-color-1);
+}
+
+@media (max-width: 768px) {
+  #event-details {
+    height: 100vw;
+  }
+  #event-details .event-detail-card {
+    height: 50vw;
+  }
+  #event-details .event-detail-card .event-detail-card_div {
+    padding-top: 10vw;
+  }
 }
 
 /* Event Cards */
@@ -280,6 +311,7 @@ h6 {
 .event-guest h1 {
   display: none;
   color: var(--text-color-1);
+  font-size: 3vw;
   font-weight: 800;
   transition: display 1s ease;
 }
@@ -291,14 +323,87 @@ h6 {
   display: block;
 }
 
+/* Event Cards */
+#past-events {
+  padding: 6vw 0;
+  width: 60vw;
+  height: 50vw;
+}
+
+#past-events .left-arrow,
+#past-events .right-arrow {
+  position: relative;
+  align-self: center;
+  z-index: 1;
+}
+#past-events .right-arrow {
+  top: 13vw;
+  right: -72vw;
+}
+#past-events .left-arrow {
+  top: 16vw;
+  left: -15vw;
+}
+#past-events .right-arrow svg {
+  transform: rotateY(180deg);
+}
+
+#past-events .left-arrow svg,
+#past-events .right-arrow svg {
+  width: min(2.5vw, 2.5vh);
+  height: min(2.5vw, 2.5vh);
+  fill: var(--text-color-1);
+}
+
+.past-event-origin {
+  transform-style: preserve-3d;
+}
+
+.past-event-card {
+  position: absolute;
+  height: 36vw;
+  width: 60vw;
+  border-radius: 1rem;
+  background-image: url("../public/guest.png");
+  background-color: rgba(255, 255, 255, 0);
+  background-blend-mode: darken;
+  background-size: 110%;
+  background-position: right 0;
+  background-repeat: no-repeat;
+  transition: background 1s ease;
+}
+.past-event-card:hover {
+  cursor: default;
+}
+
+.past-event-card h1 {
+  display: none;
+  color: var(--text-color-1);
+  font-size: 3vw;
+  font-weight: 800;
+  transition: display 1s ease;
+}
+
+.past-event-card:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.past-event-card:hover h1 {
+  display: block;
+}
+
 /* About Us */
 #aboutus {
   background-color: var(--bg-color-2);
   color: var(--text-color-1);
 }
 
+#aboutus .ceed-icon {
+  width: 9vw;
+  height: auto;
+}
+
 #aboutus h1 {
-  font-size: 2rem;
+  font-size: 2.5vw;
   margin: 0 10%;
   padding: 10% 0;
 }
