@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Domine&family=Sorts+Mill+Goudy"
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Domine&family=Sorts+Mill+Goudy&family=EB+Garamond&family=Almarai"
       rel="stylesheet"
     />
     <link href="src/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -17,7 +17,7 @@
     <title>Explore Talks</title>
   </head>
   <body>
-    <div id="navbar" class="container-fluid hidden">
+    <div id="navbar" class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#"
           ><img style="height: 4rem" src="./public/logo.png"
@@ -35,11 +35,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <div class="collapse" id="navbarSupportedContent"><h1>Hi</h1></div>
+
         <div class="collapse navbar-collapse" id="navbarLinks">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-item nav-link active" href="#">Home</a>
             <a class="nav-item nav-link" href="#event-details">Event</a>
             <!-- <a class="nav-item nav-link" href="#past-events">Past Events</a> -->
             <a class="nav-item nav-link" href="#aboutus">About Us</a>
@@ -242,25 +242,39 @@
 
     <div id="event" class="container-fluid">
       <div class="event-guest">
-        <h1 class="text-center" style="padding-top: 20%">
-          Upcomming <br />Event
-        </h1>
+        <img src="./public/guest-1.png" />
+        <div class="event-guest-text" style="padding-top: 20%">
+          <h1 class="text-center">Ahneer Grover <br />Unplugged</h1>
+        </div>
+        <img src="./public/guest-2.png" />
       </div>
+      <h1
+        style="
+          text-align: center;
+          font-family: 'EB Garamond', sans-serif;
+          font-size: 3vw;
+          font-weight: 600;
+        "
+      >
+        12th September 2023
+      </h1>
     </div>
 
     <div id="past-events" class="container-fluid">
       <div class="left-arrow">
-        <svg
-          fill="#000000"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 493.578 493.578"
-          xml:space="preserve"
-        >
-          <path
-            d="M487.267,225.981c0-17.365-13.999-31.518-31.518-31.518H194.501L305.35,83.615c12.24-12.24,12.24-32.207,0-44.676 L275.592,9.18c-12.24-12.24-32.207-12.24-44.676,0L15.568,224.527c-6.12,6.12-9.256,14.153-9.256,22.262 c0,8.032,3.136,16.142,9.256,22.262l215.348,215.348c12.24,12.239,32.207,12.239,44.676,0l29.758-29.759 c12.24-12.24,12.24-32.207,0-44.676L194.501,299.498h261.094c17.366,0,31.519-14.153,31.519-31.519L487.267,225.981z"
-          ></path>
-        </svg>
+        <button>
+          <svg
+            fill="#000000"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 493.578 493.578"
+            xml:space="preserve"
+          >
+            <path
+              d="M487.267,225.981c0-17.365-13.999-31.518-31.518-31.518H194.501L305.35,83.615c12.24-12.24,12.24-32.207,0-44.676 L275.592,9.18c-12.24-12.24-32.207-12.24-44.676,0L15.568,224.527c-6.12,6.12-9.256,14.153-9.256,22.262 c0,8.032,3.136,16.142,9.256,22.262l215.348,215.348c12.24,12.239,32.207,12.239,44.676,0l29.758-29.759 c12.24-12.24,12.24-32.207,0-44.676L194.501,299.498h261.094c17.366,0,31.519-14.153,31.519-31.519L487.267,225.981z"
+            ></path>
+          </svg>
+        </button>
       </div>
       <div
         class="past-event-origin"
@@ -354,17 +368,19 @@
         </div>
       </div>
       <div class="right-arrow">
-        <svg
-          fill="#000000"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 493.578 493.578"
-          xml:space="preserve"
-        >
-          <path
-            d="M487.267,225.981c0-17.365-13.999-31.518-31.518-31.518H194.501L305.35,83.615c12.24-12.24,12.24-32.207,0-44.676 L275.592,9.18c-12.24-12.24-32.207-12.24-44.676,0L15.568,224.527c-6.12,6.12-9.256,14.153-9.256,22.262 c0,8.032,3.136,16.142,9.256,22.262l215.348,215.348c12.24,12.239,32.207,12.239,44.676,0l29.758-29.759 c12.24-12.24,12.24-32.207,0-44.676L194.501,299.498h261.094c17.366,0,31.519-14.153,31.519-31.519L487.267,225.981z"
-          ></path>
-        </svg>
+        <button>
+          <svg
+            fill="#000000"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 493.578 493.578"
+            xml:space="preserve"
+          >
+            <path
+              d="M487.267,225.981c0-17.365-13.999-31.518-31.518-31.518H194.501L305.35,83.615c12.24-12.24,12.24-32.207,0-44.676 L275.592,9.18c-12.24-12.24-32.207-12.24-44.676,0L15.568,224.527c-6.12,6.12-9.256,14.153-9.256,22.262 c0,8.032,3.136,16.142,9.256,22.262l215.348,215.348c12.24,12.239,32.207,12.239,44.676,0l29.758-29.759 c12.24-12.24,12.24-32.207,0-44.676L194.501,299.498h261.094c17.366,0,31.519-14.153,31.519-31.519L487.267,225.981z"
+            ></path>
+          </svg>
+        </button>
       </div>
     </div>
 
@@ -384,42 +400,7 @@
 
     <div id="organizers">
       <div class="organizers-view">
-        <div class="organizer-list d-flex">
-          <div class="organizer-card">
-            <img src="." />
-            <p></p>
-            <span></span>
-          </div>
-          <div class="organizer-card">
-            <img src="." />
-            <p></p>
-            <span></span>
-          </div>
-          <div class="organizer-card">
-            <img src="." />
-            <p></p>
-            <span></span>
-          </div>
-          <div class="organizer-card">
-            <img src="." />
-            <p></p>
-            <span></span>
-          </div>
-          <div class="organizer-card">
-            <img src="." />
-            <p></p>
-            <span></span>
-          </div>
-          <div class="organizer-card">
-            <img src="." />
-            <p></p>
-            <span></span>
-          </div>
-          <div class="organizer-card">
-            <img src="." />
-            <p></p>
-            <span></span>
-          </div>
+        <div class="organizer-list" style="width: 15vw">
           <div class="organizer-card">
             <img src="." />
             <p></p>
@@ -432,12 +413,14 @@
     <footer id="contactus" class="main-footer mt-auto">
       <div class="container-fluid">
         <div class="footer-top">
-          <div class="footer-flex">
+          <div class="footer-top-flex">
             <div class="footer-logo">
-              <img src="./public/logo.png" />
+              <a href="#">
+                <img src="./public/logo.png" />
+              </a>
             </div>
             <div class="footer-links">
-              <div class="footer-flex" style="justify-content: space-around">
+              <div class="footer-flex">
                 <div class="py-4 px-3 w-25">
                   <div class="heading">Chitkara</div>
                   <div>
@@ -498,7 +481,7 @@
                 </div>
               </div>
             </div>
-            <div class="py-2 px-2" style="width: 20%"></div>
+            <div class="footer-padding py-2 px-2" style="width: 20%"></div>
           </div>
         </div>
         <div class="footer-bottom">

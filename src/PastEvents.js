@@ -48,7 +48,7 @@ export default class PastEvents {
       t = t.offsetParent;
     }
 
-    // this.doMotionId = setTimeout(() => this.doMotion(), this.doMotionTimeout);
+    this.doMotionId = setTimeout(() => this.doMotion(), this.doMotionTimeout);
 
     // onDrag() Function can also be used.
     // this.pastEventOrigin.addEventListener("drag", (ev) => {
@@ -206,11 +206,11 @@ export default class PastEvents {
       window.scrollY + this.pastEventOrigin.parentElement.clientHeight / 2 <
         this.offSetY + this.pastEventOrigin.parentElement.clientHeight
     ) {
-      // this.moveX += this.motion;
-      // this.update();
+      this.moveX += this.motion;
+      this.update();
     }
 
-    // this.doMotionId = setTimeout(() => this.doMotion(), this.doMotionTimeout);
+    this.doMotionId = setTimeout(() => this.doMotion(), this.doMotionTimeout);
   }
 
   leftArrowOnMouseDown(event) {
@@ -227,12 +227,14 @@ export default class PastEvents {
   }
 
   rightArrowOnMouseDown(event) {
+    console.log("HI1");
     this.rightArrowClick = true;
     this.doMotionTimeout = 50;
     this.motion = 5;
   }
   rightArrowOnMouseUp(event) {
     if (this.rightArrowClick) {
+      console.log("HI2");
       this.rightArrowClick = false;
       this.doMotionTimeout = 10;
       this.motion = 10;
