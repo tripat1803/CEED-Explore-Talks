@@ -1,4 +1,6 @@
 export default class Organizers {
+  widthOfCard = 10;
+
   constructor(data = []) {
     this.data = data;
     this.organizerView = document
@@ -9,13 +11,13 @@ export default class Organizers {
     res.replaceChildren(
       new DOMParser()
         .parseFromString(
-          `<div class="organizer-list" style="width: calc(15vw * 8)"></div>`,
+          `<div class="organizer-list" style="width: calc(${this.widthOfCard}vw * 8)"></div>`,
           "text/html"
         )
         .getElementsByTagName("Body")[0].firstChild
     );
     res.firstChild.style.width = `max(${
-      15 * this.data.length + 15 * 10
+      this.widthOfCard * this.data.length + this.widthOfCard * 8
     }vw, 100vw)`;
 
     for (let i of data) {

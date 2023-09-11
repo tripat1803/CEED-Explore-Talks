@@ -1,39 +1,3 @@
-:root {
-  --text-color-1: #0f0f0f;
-  --text-color-2: #727272;
-  --text-color-3: #636363;
-  --text-color-4: #393939;
-  --text-color-5: #363636;
-  --main-color-1: #f4792a;
-  --main-color-2: #2385c7;
-  --main-color-3: #f4792a;
-  --main-color-4: #000;
-  --bg-color-1: #ffffff;
-  --bg-color-2: #cfcfcf;
-
-  /* --text-color-1: #ffffff;
-  --text-color-2: #dad4b5;
-  --text-color-3: #dad4b5;
-  --text-color-4: #f2e8c6;
-  --text-color-5: #f2e8c6;
-  --main-color-1: #dac0a3;
-  --main-color-2: #dac0a3;
-  --main-color-3: #f4792a;
-  --bg-color-1: #952323;
-  --bg-color-2: #a73121; */
-
-  --text-color-1: #ffffff;
-  --text-color-2: #5c8374;
-  --text-color-3: #5c8374;
-  --text-color-4: #93b1a6;
-  --text-color-5: #93b1a6;
-  --main-color-1: #a2c579;
-  --main-color-2: #a2c579;
-  --main-color-3: #016a70;
-  --bg-color-1: #040d12;
-  --bg-color-2: #183d3d;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -139,29 +103,29 @@ h6 {
 }
 
 #start {
-  height: 100vw;
+  height: min(100vw, 100vh);
   font-family: "Domine", sans-serif;
 }
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   #start {
-    height: 60vh;
+    height: 80vh;
   }
 }
 @media (min-width: 768px) {
   #start {
-    height: 70vh;
+    height: 90vh;
   }
 }
 @media (min-width: 1200px) {
   #start {
-    height: 80vh;
+    height: 100vh;
   }
 }
 @media (min-width: 1400px) {
   #start {
     height: 100vh;
   }
-}
+} */
 
 #start h1 {
   font-family: "Domine", sans-serif;
@@ -171,6 +135,7 @@ h6 {
 #start p {
   font-family: "Domine", sans-serif;
   color: var(--text-color-2);
+  margin-top: -3vw;
 }
 
 #start .idea-bulb {
@@ -187,6 +152,62 @@ h6 {
   animation-name: home-idea-bulb;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+}
+
+#start .rope-animation {
+  position: absolute;
+  width: 10vw;
+  height: min(100vh, 100vw);
+}
+
+#start .rope-animation .img {
+  width: 5vw;
+  height: 5vw;
+  margin-top: -95%;
+  margin-left: 35%;
+  transform: rotateZ(180deg);
+  background-image: url("../public/Idea\ Bulb\ 1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-name: home-idea-bulb;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+#start .rope-animation svg {
+  width: 100%;
+  height: 100%;
+}
+
+#start .rope-animation .n1:nth-child(n) {
+  transform: translate(1000px, -500px) scale(3, 4);
+}
+
+@keyframes dash {
+  0%,
+  100% {
+    d: path("M-293.2,40.4c0,0,8.5+10.9,0+220");
+  }
+  50% {
+    d: path("M-293.2,40.4c0,0,-8.5+10.9,0+220");
+  }
+  25%,
+  75% {
+    d: path("M-293.2,40.4c0,0,0+0,0+220");
+  }
+}
+
+#start .rope-animation path {
+  opacity: 0.4;
+  stroke: #681212;
+  stroke-width: 4px;
+  stroke-dasharray: 10;
+}
+
+#start .rope-animation path:nth-child(1) {
+  opacity: 1;
+  stroke-dasharray: none;
+  animation: dash 5000ms linear forwards infinite;
 }
 
 #start .start-title {
@@ -253,7 +274,9 @@ h6 {
 }
 
 #event-details .event-detail-card {
-  height: 50%;
+  /* height: 50%; */
+  flex-shrink: 0;
+  flex-grow: 1;
   padding: 5% 15%;
   scale: 1;
   transition: scale 0.2s ease;
@@ -273,11 +296,11 @@ h6 {
 }
 
 #event-details .event-detail-card h1 {
-  font-family: "Black Ops One", sans-serif;
+  font-family: "Patua One", sans-serif;
   color: var(--text-color-1);
   text-align: left;
   font-size: 2.5vw;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 #event-details .event-detail-card p {
@@ -413,11 +436,13 @@ h6 {
 }
 
 .past-event-card {
+  --bg-img: url("../public/guest-bg.png");
   position: absolute;
   height: 36vw;
   width: 60vw;
   border-radius: 1rem;
-  background-image: url("../public/guest-bg.png");
+  /* background-image: url("../public/guest-bg.png"); */
+  background-image: var(--bg-img);
   background-color: rgba(255, 255, 255, 0);
   background-blend-mode: darken;
   background-size: 110%;
@@ -491,14 +516,13 @@ h6 {
 
 #organizers {
   width: 100%;
-  height: 25vw;
+  height: 15vw;
 }
 
 #organizers .organizers-view {
   display: flex;
   height: 100%;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
+  padding: 2.5vw 0;
   overflow-x: hidden;
 }
 
@@ -522,22 +546,23 @@ h6 {
 #organizers .organizer-card {
   color: var(--text-color-1);
   text-align: center;
-  height: 15vw;
-  width: 15vw;
+  height: 10vw;
+  width: 10vw;
 }
 
 #organizers .organizer-card img {
-  height: 12vw;
-  width: 12vw;
+  height: 6vw;
+  width: 6vw;
   border-radius: 100%;
 }
 
 #organizers .organizer-card p {
-  font-size: 1.25vw;
-  margin-bottom: 0;
+  font-size: 1vw;
+  margin-top: 0.5rem;
+  margin-bottom: -0.5rem;
 }
 #organizers .organizer-card span {
-  font-size: 1vw;
+  font-size: 0.9vw;
 }
 
 /* Main Footer */

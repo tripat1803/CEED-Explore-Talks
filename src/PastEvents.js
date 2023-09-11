@@ -2,11 +2,11 @@ export default class PastEvents {
   preX = 0;
   preMoveX = 0;
   moveX = 0;
-  motion = 5;
+  motion = 0.5;
   click = false;
   leftArrowClick = false;
   rightArrowClick = false;
-  doMotionTimeout = 100;
+  doMotionTimeout = 20;
 
   constructor() {
     this.pastEventOrigin =
@@ -70,15 +70,15 @@ export default class PastEvents {
     window.addEventListener("touchend", (ev) => this.onTouchEnd(ev));
     window.addEventListener("touchmove", (ev) => this.onTouchMove(ev));
 
-    this.pastEventOrigin.parentElement
-      .getElementsByClassName("left-arrow")[0]
-      .addEventListener("mousedown", (ev) => this.leftArrowOnMouseDown(ev));
-    window.addEventListener("mousedown", (ev) => this.leftArrowOnMouseUp(ev));
+    // this.pastEventOrigin.parentElement
+    //   .getElementsByClassName("left-arrow")[0]
+    //   .addEventListener("mousedown", (ev) => this.leftArrowOnMouseDown(ev));
+    // window.addEventListener("mousedown", (ev) => this.leftArrowOnMouseUp(ev));
 
-    this.pastEventOrigin.parentElement
-      .getElementsByClassName("right-arrow")[0]
-      .addEventListener("mousedown", (ev) => this.rightArrowOnMouseDown(ev));
-    window.addEventListener("mousedown", (ev) => this.rightArrowOnMouseUp(ev));
+    // this.pastEventOrigin.parentElement
+    //   .getElementsByClassName("right-arrow")[0]
+    //   .addEventListener("mousedown", (ev) => this.rightArrowOnMouseDown(ev));
+    // window.addEventListener("mousedown", (ev) => this.rightArrowOnMouseUp(ev));
 
     this.update();
   }

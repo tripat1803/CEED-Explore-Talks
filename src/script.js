@@ -3,15 +3,19 @@ import Organizers from "./Organizers.js";
 import Nav from "./Nav.js";
 
 const organizersData = [
-  { name: "Name-1", post: "post-1", image: "./public/people.jpeg" },
-  { name: "Name-2", post: "post-2", image: "./public/people.jpeg" },
-  { name: "Name-3", post: "post-3", image: "./public/people.jpeg" },
-  { name: "Name-4", post: "post-4", image: "./public/people.jpeg" },
-  { name: "Name-5", post: "post-5", image: "./public/people.jpeg" },
-  { name: "Name-6", post: "post-6", image: "./public/people.jpeg" },
-  { name: "Name-7", post: "post-7", image: "./public/people.jpeg" },
-  { name: "Name-8", post: "post-8", image: "./public/people.jpeg" },
-  { name: "Name-9", post: "post-9", image: "./public/people.jpeg" },
+  { name: "Simrandeep Singh", post: "post-1", image: "./public/people.jpeg" },
+  { name: "Garv Sehgal", post: "post-2", image: "./public/people.jpeg" },
+  { name: "Lokesh", post: "Website Devloper", image: "./public/people.jpeg" },
+  { name: "Livarpit", post: "post-4", image: "./public/people.jpeg" },
+  { name: "Naina", post: "post-5", image: "./public/people.jpeg" },
+  {
+    name: "Niharka Singla",
+    post: "Website Designer",
+    image: "./public/people.jpeg",
+  },
+  { name: "Naman", post: "post-7", image: "./public/people.jpeg" },
+  { name: "Navya", post: "post-8", image: "./public/people.jpeg" },
+  { name: "Pratik", post: "post-9", image: "./public/people.jpeg" },
   { name: "Name-10", post: "post-10", image: "./public/people.jpeg" },
   { name: "Name-11", post: "post-11", image: "./public/people.jpeg" },
   { name: "Name-12", post: "post-12", image: "./public/people.jpeg" },
