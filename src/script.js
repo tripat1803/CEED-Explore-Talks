@@ -29,7 +29,7 @@ const organizersData = [
 
 window.nav = new Nav();
 window.pastEvents = new PastEvents();
-window.organizers = new Organizers(organizersData);
+// window.organizers = new Organizers(organizersData);
 
 document.getElementsByClassName("start-padding")[0].style.height =
   document.getElementById("navbar").clientHeight + "px";

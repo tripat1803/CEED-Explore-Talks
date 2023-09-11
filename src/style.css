@@ -607,13 +607,18 @@ h6 {
   margin-left: auto;
 }
 
-.footer-link {
+.footer-link,
+.footer-links p {
   font-family: montserrat, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   color: var(--text-color-4);
   text-transform: capitalize;
+}
+
+.footer-links p {
+  margin: 0;
 }
 
 .footer-top-flex {
