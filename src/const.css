@@ -1,0 +1,56 @@
+@keyframes image-1 {
+  0% {
+    margin-top: -400%;
+    transform: scale(0.5);
+  }
+  100% {
+    margin-top: 0%;
+    transform: scale(1);
+  }
+}
+
+@keyframes image-2 {
+  0%,
+  50%,
+  100% {
+    left: 0%;
+  }
+  25% {
+    left: 5%;
+  }
+  75% {
+    left: 5%;
+  }
+}
+
+.construction {
+  width: 40vw;
+  height: 40vh;
+  margin: auto;
+  padding-top: 20vh;
+}
+
+.construction .image {
+  margin-top: 0%;
+  transform: scale(1);
+  animation-name: image-1;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.46, 1.2);
+  animation-delay: 0s;
+}
+
+.construction .image img {
+  height: 50vh;
+  position: relative;
+  animation-name: image-2;
+  animation-duration: 20s;
+  animation-timing-function: ease-out;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+}
+
+.construction .content {
+  margin-top: 1rem;
+  color: var(--text-color-1);
+  font-family: "Patua One";
+}

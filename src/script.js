@@ -33,3 +33,10 @@ window.pastEvents = new PastEvents();
 
 document.getElementsByClassName("start-padding")[0].style.height =
   document.getElementById("navbar").clientHeight + "px";
+
+for (let i of document.getElementsByClassName("event-detail-card")) {
+  i.addEventListener("mousedown", () => {
+    window.location.assign("/construction.html");
+    console.log("YO");
+  });
+}
