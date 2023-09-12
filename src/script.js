@@ -31,8 +31,29 @@ window.nav = new Nav();
 window.pastEvents = new PastEvents();
 // window.organizers = new Organizers(organizersData);
 
+document.documentElement.setAttribute("theme", "dark");
+// document.documentElement.setAttribute("theme", "light");
+
 document.getElementsByClassName("start-padding")[0].style.height =
   document.getElementById("navbar").clientHeight + "px";
+
+window.addEventListener("scroll", (ev) => missionStatementScroll(ev));
+function missionStatementScroll(event) {
+  let l = ["mission-statement", "event-details", "aboutus"];
+
+  for (let i of l) {
+    if (
+      document.getElementById(i).offsetTop + 200 <=
+      window.scrollY + window.innerHeight
+    ) {
+      document.getElementById(i).style.transform = ``;
+      document.getElementById(i).style.opacity = `1`;
+    } else {
+      document.getElementById(i).style.opacity = `0`;
+      document.getElementById(i).style.transform = `translateY(200px)`;
+    }
+  }
+}
 
 for (let i of document.getElementsByClassName("event-detail-card")) {
   i.addEventListener("mousedown", () => {

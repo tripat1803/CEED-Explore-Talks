@@ -3,10 +3,14 @@ export default class PastEvents {
   preMoveX = 0;
   moveX = 0;
   motion = 0.5;
+  motionFast = 4;
+  motionSlow = 0.5;
   click = false;
   leftArrowClick = false;
   rightArrowClick = false;
   doMotionTimeout = 20;
+  doMotionTimeoutFast = 10;
+  doMotionTimeoutSlow = 20;
 
   constructor() {
     this.pastEventOrigin =
@@ -70,15 +74,15 @@ export default class PastEvents {
     window.addEventListener("touchend", (ev) => this.onTouchEnd(ev));
     window.addEventListener("touchmove", (ev) => this.onTouchMove(ev));
 
-    // this.pastEventOrigin.parentElement
-    //   .getElementsByClassName("left-arrow")[0]
-    //   .addEventListener("mousedown", (ev) => this.leftArrowOnMouseDown(ev));
-    // window.addEventListener("mousedown", (ev) => this.leftArrowOnMouseUp(ev));
+    this.pastEventOrigin.parentElement
+      .getElementsByClassName("left-arrow")[0]
+      .addEventListener("mousedown", (ev) => this.leftArrowOnMouseDown(ev));
+    window.addEventListener("mouseup", (ev) => this.leftArrowOnMouseUp(ev));
 
-    // this.pastEventOrigin.parentElement
-    //   .getElementsByClassName("right-arrow")[0]
-    //   .addEventListener("mousedown", (ev) => this.rightArrowOnMouseDown(ev));
-    // window.addEventListener("mousedown", (ev) => this.rightArrowOnMouseUp(ev));
+    this.pastEventOrigin.parentElement
+      .getElementsByClassName("right-arrow")[0]
+      .addEventListener("mousedown", (ev) => this.rightArrowOnMouseDown(ev));
+    window.addEventListener("mouseup", (ev) => this.rightArrowOnMouseUp(ev));
 
     this.update();
   }
@@ -89,6 +93,11 @@ export default class PastEvents {
     } else if (event.clientX == 0) {
       this.preX = 0;
     } else {
+      if (this.preX > event.clientX) {
+        this.forwardMotion(-this.motionSlow);
+      } else if (this.preX < event.clientX) {
+        this.forwardMotion(this.motionSlow);
+      }
       this.moveX -= this.preX - event.clientX;
       this.preX = event.clientX;
     }
@@ -116,6 +125,11 @@ export default class PastEvents {
       } else if (event.clientX == 0) {
         this.preX = 0;
       } else {
+        if (this.preX > event.clientX) {
+          this.forwardMotion(-this.motionSlow);
+        } else if (this.preX < event.clientX) {
+          this.forwardMotion(this.motionSlow);
+        }
         this.moveX -= this.preX - event.clientX;
         this.preX = event.clientX;
       }
@@ -143,6 +157,11 @@ export default class PastEvents {
       } else if (event.changedTouches[0].screenX == 0) {
         this.preX = 0;
       } else {
+        if (this.preX > event.clientX) {
+          this.forwardMotion(-this.motionSlow);
+        } else if (this.preX < event.clientX) {
+          this.forwardMotion(this.motionSlow);
+        }
         this.moveX -= this.preX - event.changedTouches[0].screenX;
         this.preX = event.changedTouches[0].screenX;
       }
@@ -213,31 +232,30 @@ export default class PastEvents {
     this.doMotionId = setTimeout(() => this.doMotion(), this.doMotionTimeout);
   }
 
+  forwardMotion(m = 0.5, mt = 20) {
+    this.doMotionTimeout = mt;
+    this.motion = m;
+  }
+
   leftArrowOnMouseDown(event) {
     this.leftArrowClick = true;
-    this.doMotionTimeout = 50;
-    this.motion = -5;
+    this.forwardMotion(-this.motionFast, this.doMotionTimeoutFast);
   }
   leftArrowOnMouseUp(event) {
     if (this.leftArrowClick) {
       this.leftArrowClick = false;
-      this.doMotionTimeout = 10;
-      this.motion = -10;
+      this.forwardMotion(-this.motionSlow, this.doMotionTimeoutSlow);
     }
   }
 
   rightArrowOnMouseDown(event) {
-    console.log("HI1");
     this.rightArrowClick = true;
-    this.doMotionTimeout = 50;
-    this.motion = 5;
+    this.forwardMotion(this.motionFast, this.doMotionTimeoutFast);
   }
   rightArrowOnMouseUp(event) {
     if (this.rightArrowClick) {
-      console.log("HI2");
       this.rightArrowClick = false;
-      this.doMotionTimeout = 10;
-      this.motion = 10;
+      this.forwardMotion(this.motionSlow, this.doMotionTimeoutSlow);
     }
   }
 }

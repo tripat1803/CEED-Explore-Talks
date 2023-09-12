@@ -35,8 +35,7 @@ h6 {
 #navbar {
   /* background-color: var(--bg-color-2); */
   background-image: linear-gradient(
-    var(--bg-color-2),
-    var(--bg-color-2) 60%,
+    var(--nav-bg-color-1) 60%,
     rgb(0, 0, 0, 0) 100%
   );
   position: fixed;
@@ -240,13 +239,15 @@ h6 {
   font-family: "Sorts Mill Goudy", sans-serif;
   background-color: var(--bg-color-2);
   color: var(--text-color-1);
+  margin: 0 5%;
+  transition: transform 0.5s ease, opacity 1s ease;
 }
 
 #mission-statement h1 {
   font-family: "Sorts Mill Goudy", sans-serif;
   font-size: 2.25vw;
   text-align: center;
-  margin: 0 10%;
+  margin: 0 5%;
   padding: 10% 0;
 }
 
@@ -266,6 +267,7 @@ h6 {
   height: 90vh;
   margin: 5% 0;
   background-color: var(--bg-color-1);
+  transition: transform 0.5s ease, opacity 1s ease;
 }
 
 #event-details .main-divider {
@@ -369,10 +371,10 @@ h6 {
 }
 
 .event-guest .event-guest-text {
-  display: none;
+  opacity: 0;
   margin: 0 auto;
-  color: var(--text-color-1);
-  transition: display 1s ease;
+  color: var(--main-color-2);
+  transition: opacity 1s ease-in-out;
 }
 
 .event-guest h1 {
@@ -390,7 +392,7 @@ h6 {
   right: 5%;
 }
 .event-guest:hover .event-guest-text {
-  display: block;
+  opacity: 1;
 }
 
 /* Event Cards */
@@ -414,11 +416,6 @@ h6 {
 #past-events .left-arrow {
   top: 16vw;
   left: -15vw;
-}
-#past-events .left-arrow button,
-#past-events .right-arrow button {
-  background-color: transparent;
-  border: none;
 }
 #past-events .right-arrow svg {
   transform: rotateY(180deg);
@@ -456,7 +453,7 @@ h6 {
 
 .past-event-card h1 {
   display: none;
-  color: var(--text-color-1);
+  color: var(--main-color-3);
   font-size: 3vw;
   font-weight: 800;
   transition: display 1s ease;
@@ -473,6 +470,7 @@ h6 {
 #aboutus {
   background-color: var(--bg-color-2);
   color: var(--text-color-1);
+  transition: transform 0.5s ease, opacity 1s ease;
 }
 
 #aboutus .ceed-icon {
