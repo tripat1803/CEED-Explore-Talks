@@ -155,21 +155,113 @@ h6 {
   animation: start-bg-ani-1 30s linear infinite;
 }
 
+#start .bg-ani .stone {
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  transform: translate(-10vw, min(-10vh, -10vw));
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#start .bg-ani .stone:nth-child(4n + 1) {
+  background-image: url("../public/stone-1.png");
+}
+#start .bg-ani .stone:nth-child(4n + 2) {
+  background-image: url("../public/stone-2.png");
+}
+#start .bg-ani .stone:nth-child(4n + 3) {
+  background-image: url("../public/stone-3.png");
+}
+#start .bg-ani .stone:nth-child(4n + 0) {
+  background-image: url("../public/stone-4.png");
+}
+
 @keyframes start-bg-ani-1 {
   0%,
   100% {
     background-position: 0px 0px;
-  }
-  25% {
-    background-position: 10px 0px;
-    background-size: 110%;
-  }
-  50% {
-    background-position: 10px 10px;
-  }
-  75% {
-    background-position: 0px 10px;
     background-size: 105%;
+  }
+  20% {
+    background-position: 8px 0px;
+    background-size: 107%;
+  }
+  40% {
+    background-position: 10px 2px;
+    background-size: 109%;
+  }
+  60% {
+    background-position: 2px 10px;
+    background-size: 108%;
+  }
+  80% {
+    background-position: 0px 8px;
+    background-size: 107%;
+  }
+}
+
+@keyframes start-bg-ani-stone-1 {
+  0% {
+    transform: translate(60vw, min(-10vh, -10vw)) rotate(0deg);
+  }
+  100% {
+    transform: translate(110vw, min(110vh, 110vw)) rotate(300deg);
+  }
+}
+@keyframes start-bg-ani-stone-2 {
+  0% {
+    transform: translate(-10vw, min(20vh, 20vw)) rotate(0deg);
+  }
+  100% {
+    transform: translate(110vw, min(110vh, 110vw)) rotate(300deg);
+  }
+}
+@keyframes start-bg-ani-stone-3 {
+  0% {
+    transform: translate(110vw, min(-10vh, -10vw)) rotate(0deg);
+  }
+  100% {
+    transform: translate(-10vw, min(110vh, 110vw)) rotate(300deg);
+  }
+}
+@keyframes start-bg-ani-stone-4 {
+  0% {
+    transform: translate(50vw, min(110vh, 110vw)) rotate(0deg);
+  }
+  100% {
+    transform: translate(80vw, min(-10vh, -10vw)) rotate(300deg);
+  }
+}
+@keyframes start-bg-ani-stone-5 {
+  0% {
+    transform: translate(110vw, min(40vh, 40vw)) rotate(0deg);
+  }
+  100% {
+    transform: translate(-10vw, min(110vh, 110vw)) rotate(300deg);
+  }
+}
+@keyframes start-bg-ani-stone-6 {
+  0% {
+    transform: translate(40vw, min(-10vh, -10vw)) rotate(0deg);
+  }
+  100% {
+    transform: translate(70vw, min(110vh, 110vw)) rotate(300deg);
+  }
+}
+@keyframes start-bg-ani-stone-7 {
+  0% {
+    transform: translate(30vw, min(-10vh, -10vw)) rotate(0deg);
+  }
+  100% {
+    transform: translate(-10vw, min(70vh, 70vw)) rotate(300deg);
+  }
+}
+@keyframes start-bg-ani-stone-8 {
+  0% {
+    transform: translate(50vw, min(110vh, 110vw)) rotate(300deg);
+  }
+  100% {
+    transform: translate(20vw, min(-10vh, -10vw)) rotate(0deg);
   }
 }
 
