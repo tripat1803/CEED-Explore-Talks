@@ -39,7 +39,7 @@ document.getElementsByClassName("start-padding")[0].style.height =
 
 window.addEventListener("scroll", (ev) => missionStatementScroll(ev));
 function missionStatementScroll(event) {
-  let l = ["mission-statement", "event-details", "aboutus"];
+  let l = ["mission-statement", "aboutus"];
 
   for (let i of l) {
     if (
@@ -53,11 +53,31 @@ function missionStatementScroll(event) {
       document.getElementById(i).style.transform = `translateY(200px)`;
     }
   }
+
+  for (let i = 0; i < 2; i++) {
+    if (
+      document.getElementById("event-details").children[i].offsetTop + 100 <=
+      window.scrollY + window.innerHeight
+    ) {
+      document.getElementById("event-details").children[i].style.transform = ``;
+      document.getElementById("event-details").children[i].style.opacity = `1`;
+    } else {
+      document.getElementById("event-details").children[i].style.opacity = `0`;
+      if (i == 0) {
+        document.getElementById("event-details").children[
+          i
+        ].style.transform = `translateX(-100%)`;
+      } else if (i == 1) {
+        document.getElementById("event-details").children[
+          i
+        ].style.transform = `translateX(100%)`;
+      }
+    }
+  }
 }
 
 for (let i of document.getElementsByClassName("event-detail-card")) {
-  i.addEventListener("mousedown", () => {
-    window.location.assign("/construction.html");
-    console.log("YO");
+  i.addEventListener("mousedown", (ev) => {
+    if (ev.button == 0) window.location.assign("/construction.html");
   });
 }
