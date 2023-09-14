@@ -470,11 +470,11 @@ h6 {
   display: flex;
   height: 36vw;
   border-radius: 1rem;
-  background-image: url("../public/guest-bg.png");
+  /* background-image: url("../public/guest-bg.png"); */
   background-color: rgba(255, 255, 255, 0);
   background-blend-mode: darken;
-  background-size: 60%;
-  background-position: top;
+  background-size: 70%;
+  background-position: center;
   background-repeat: no-repeat;
   transition: background 1s ease;
 }
@@ -497,7 +497,7 @@ h6 {
 .event-guest .event-guest-text {
   opacity: 0;
   margin: 0 auto;
-  color: var(--main-color-2);
+  color: var(--text-color-1);
   transition: opacity 1s ease-in-out;
 }
 
@@ -507,7 +507,8 @@ h6 {
 }
 
 .event-guest:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .event-guest:hover img:first-child {
   left: 5%;
@@ -549,7 +550,7 @@ h6 {
 #past-events .right-arrow svg {
   width: min(5vw, 5vh);
   height: min(5vw, 5vh);
-  fill: var(--bg-color-1);
+  fill: var(--main-color-1);
 }
 
 .past-event-origin {
