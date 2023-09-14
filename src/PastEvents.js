@@ -197,29 +197,6 @@ export default class PastEvents {
       t = t.offsetParent;
     }
 
-    // console.log(
-    //   window,
-    //   window.scrollY + window.outerHeight,
-    //   this.offSetY,
-    //   window.scrollY,
-    //   this.pastEventOrigin.parentElement.clientHeight,
-    //   this.pastEventOrigin.parentElement.clientHeight / 2,
-    //   window.scrollY + this.pastEventOrigin.parentElement.clientHeight / 2,
-    //   this.pastEventOrigin.parentElement.clientHeight,
-    //   this.offSetY + this.pastEventOrigin.parentElement.clientHeight,
-    //   window.scrollY + window.outerHeight > this.offSetY,
-    //   window.scrollY + this.pastEventOrigin.parentElement.clientHeight / 2 <
-    //     this.offSetY + this.pastEventOrigin.parentElement.clientHeight,
-    //   window.scrollY <
-    //     this.offSetY + this.pastEventOrigin.parentElement.clientHeight,
-    //   window.scrollY + window.outerHeight > this.offSetY &&
-    //     window.scrollY + this.pastEventOrigin.parentElement.clientHeight / 2 <
-    //       this.offSetY + this.pastEventOrigin.parentElement.clientHeight,
-    //   window.scrollY + window.outerHeight > this.offSetY &&
-    //     window.scrollY + this.pastEventOrigin.parentElement.clientHeight / 2 <
-    //       this.offSetY + this.pastEventOrigin.parentElement.clientHeight
-    // );
-
     if (
       window.scrollY + window.outerHeight > this.offSetY &&
       window.scrollY + this.pastEventOrigin.parentElement.clientHeight / 2 <
@@ -238,24 +215,34 @@ export default class PastEvents {
   }
 
   leftArrowOnMouseDown(event) {
-    this.leftArrowClick = true;
-    this.forwardMotion(-this.motionFast, this.doMotionTimeoutFast);
+    if (this.leftArrowClick == false) {
+      this.leftArrowClick = true;
+      this.forwardMotion(-this.motionFast, this.doMotionTimeoutFast);
+      setTimeout(
+        () => this.forwardMotion(-this.motionSlow, this.doMotionTimeoutSlow),
+        1200
+      );
+    }
   }
   leftArrowOnMouseUp(event) {
     if (this.leftArrowClick) {
       this.leftArrowClick = false;
-      this.forwardMotion(-this.motionSlow, this.doMotionTimeoutSlow);
     }
   }
 
   rightArrowOnMouseDown(event) {
-    this.rightArrowClick = true;
-    this.forwardMotion(this.motionFast, this.doMotionTimeoutFast);
+    if (this.rightArrowClick == false) {
+      this.rightArrowClick = true;
+      this.forwardMotion(this.motionFast, this.doMotionTimeoutFast);
+      setTimeout(
+        () => this.forwardMotion(this.motionSlow, this.doMotionTimeoutSlow),
+        1200
+      );
+    }
   }
   rightArrowOnMouseUp(event) {
     if (this.rightArrowClick) {
       this.rightArrowClick = false;
-      this.forwardMotion(this.motionSlow, this.doMotionTimeoutSlow);
     }
   }
 }

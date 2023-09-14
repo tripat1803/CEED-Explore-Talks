@@ -547,9 +547,9 @@ h6 {
 
 #past-events .left-arrow svg,
 #past-events .right-arrow svg {
-  width: min(2.5vw, 2.5vh);
-  height: min(2.5vw, 2.5vh);
-  fill: var(--text-color-1);
+  width: min(5vw, 5vh);
+  height: min(5vw, 5vh);
+  fill: var(--bg-color-1);
 }
 
 .past-event-origin {
