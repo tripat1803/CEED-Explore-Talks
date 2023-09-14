@@ -4,6 +4,10 @@ html {
 
 body {
   background-color: var(--bg-color-1);
+  background-image: url("../public/stars-1.png");
+  background-attachment: fixed;
+  background-size: 30%;
+  animation: body-ani 30s linear infinite forwards;
 }
 
 a,
@@ -29,6 +33,15 @@ h4,
 h5,
 h6 {
   font-family: montserrat, sans-serif;
+}
+
+@keyframes body-ani {
+  0% {
+    background-position: 0vw min(0vw, 0vh);
+  }
+  100% {
+    background-position: 10vw min(5vw, 5vh);
+  }
 }
 
 /* Navbar */
@@ -68,6 +81,11 @@ h6 {
 #start {
   height: min(100vw, 100vh);
   font-family: "Domine", sans-serif;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 96%,
+    rgba(0, 0, 0, 0.9) 98%,
+    rgba(0, 0, 0, 0)
+  );
 }
 /* @media (min-width: 576px) {
   #start {
@@ -155,6 +173,17 @@ h6 {
   animation: start-bg-ani-1 30s linear infinite;
 }
 
+#start .bg-ani .stars {
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100vw;
+  height: min(100vw, 100vh);
+  background-image: url("../public/stars-1.png");
+  background-size: 5%;
+  animation: start-bg-ani-stars-1 60s linear infinite forwards;
+}
+
 #start .bg-ani .stone {
   height: 4rem;
   width: 4rem;
@@ -174,6 +203,15 @@ h6 {
 }
 #start .bg-ani .stone:nth-child(4n + 0) {
   background-image: url("../public/stone-4.png");
+}
+#start .bg-ani .comet {
+  height: 4rem;
+  width: 8rem;
+  position: absolute;
+  transform: translate(-10vw, min(-10vh, -10vw));
+  background-image: url("../public/comet-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @keyframes start-bg-ani-1 {
@@ -200,6 +238,14 @@ h6 {
   }
 }
 
+@keyframes start-bg-ani-stars-1 {
+  0% {
+    background-position: 0vw min(0vw, 0vh);
+  }
+  100% {
+    background-position: 10vw min(1vw, 1vh);
+  }
+}
 @keyframes start-bg-ani-stone-1 {
   0% {
     transform: translate(60vw, min(-10vh, -10vw)) rotate(0deg);
@@ -210,10 +256,10 @@ h6 {
 }
 @keyframes start-bg-ani-stone-2 {
   0% {
-    transform: translate(-10vw, min(20vh, 20vw)) rotate(0deg);
+    transform: translate(-10vw, min(20vh, 20vw)) rotate(300deg);
   }
   100% {
-    transform: translate(110vw, min(110vh, 110vw)) rotate(300deg);
+    transform: translate(110vw, min(110vh, 110vw)) rotate(0deg);
   }
 }
 @keyframes start-bg-ani-stone-3 {
@@ -226,10 +272,10 @@ h6 {
 }
 @keyframes start-bg-ani-stone-4 {
   0% {
-    transform: translate(50vw, min(110vh, 110vw)) rotate(0deg);
+    transform: translate(50vw, min(110vh, 110vw)) rotate(300deg);
   }
   100% {
-    transform: translate(80vw, min(-10vh, -10vw)) rotate(300deg);
+    transform: translate(80vw, min(-10vh, -10vw)) rotate(0deg);
   }
 }
 @keyframes start-bg-ani-stone-5 {
@@ -265,12 +311,34 @@ h6 {
   }
 }
 
+@keyframes start-bg-ani-comet-1 {
+  0% {
+    transform: translate(-10vw, min(90vh, 90vw)) rotate(190deg);
+  }
+  50%,
+  100% {
+    transform: translate(110vw, min(70vh, 70vw)) rotate(190deg);
+  }
+}
+@keyframes start-bg-ani-comet-2 {
+  0% {
+    scale: 1.1;
+    transform: translate(100vw, min(-10vh, -10vw));
+  }
+  50%,
+  100% {
+    scale: 1;
+    transform: translate(-10vw, min(40vh, 40vw));
+  }
+}
+
 /* Mission Statement */
 #mission-statement {
   font-family: "Sorts Mill Goudy", sans-serif;
   background-color: var(--bg-color-2);
   color: var(--text-color-1);
   margin: 0 5%;
+  border-radius: 2rem;
   transition: transform 0.5s ease, opacity 1s ease;
 }
 
@@ -297,7 +365,6 @@ h6 {
   margin: 4% 0;
   padding: 1% 0;
   overflow-x: hidden;
-  background-color: var(--bg-color-1);
 }
 
 #event-details .event-detail-card-list {
