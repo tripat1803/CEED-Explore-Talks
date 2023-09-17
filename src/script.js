@@ -2,6 +2,117 @@ import PastEvents from "./PastEvents.js";
 import Organizers from "./Organizers.js";
 import Nav from "./Nav.js";
 
+const pastEventsData = [
+  {
+    name: "Past Event-1",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-2",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-3",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-4",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-5",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-6",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-7",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-8",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-9",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-10",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-11",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+  {
+    name: "Past Event-12",
+    images: [
+      "../public/past events/event-1.jpeg",
+      "../public/past events/event-2.jpeg",
+      "../public/past events/event-3.jpeg",
+      "../public/past events/event-4.jpeg",
+    ],
+  },
+];
+
 const organizersData = [
   { name: "Simrandeep Singh", post: "post-1", image: "./public/people.jpeg" },
   { name: "Garv Sehgal", post: "post-2", image: "./public/people.jpeg" },
@@ -28,7 +139,7 @@ const organizersData = [
 ];
 
 window.nav = new Nav();
-window.pastEvents = new PastEvents();
+window.pastEvents = new PastEvents(pastEventsData);
 // window.organizers = new Organizers(organizersData);
 
 document.documentElement.setAttribute("theme", "dark");

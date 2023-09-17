@@ -573,23 +573,24 @@ h6 {
   background-repeat: no-repeat;
   transition: background 1s ease;
 }
+
+.past-event-card h1 {
+  opacity: 0;
+  color: var(--main-color-3);
+  padding-top: 30vw;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 800;
+  text-shadow: 4px 4px 2px var(--bg-color-1), 0 0 1em var(--main-color-3),
+    0 0 0.2em var(--main-color-3);
+  transition: opacity 0.25s ease;
+}
+
 .past-event-card:hover {
   cursor: default;
 }
-
-.past-event-card h1 {
-  display: none;
-  color: var(--main-color-3);
-  font-size: 3vw;
-  font-weight: 800;
-  transition: display 1s ease;
-}
-
-.past-event-card:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
 .past-event-card:hover h1 {
-  display: block;
+  opacity: 1;
 }
 
 /* About Us */
