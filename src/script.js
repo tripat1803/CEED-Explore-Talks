@@ -192,3 +192,12 @@ for (let i of document.getElementsByClassName("event-detail-card")) {
     if (ev.button == 0) window.location.assign("/construction.html");
   });
 }
+
+document.getElementsByTagName("body")[0].onload = (ev) => {
+  setTimeout(() => {
+    document.getElementById("loader").style.opacity = 0;
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+    }, 2000);
+  }, 2000);
+};

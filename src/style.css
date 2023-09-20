@@ -44,6 +44,40 @@ h6 {
   }
 }
 
+/* Loader */
+#loader {
+  z-index: 101;
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 2s ease;
+  background-color: var(--bg-color-1);
+  background-image: url("../public/stars-1.png");
+  background-attachment: fixed;
+  background-size: 30%;
+}
+
+.spinner {
+  border: 8px solid var(--bg-color-2);
+  border-top: 8px solid var(--main-color-1);
+  border-bottom: 8px solid var(--main-color-1);
+  border-radius: 50%;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Navbar */
 #navbar {
   /* background-color: var(--bg-color-2); */
