@@ -1,6 +1,9 @@
 import PastEvents from "./PastEvents.js";
 import Organizers from "./Organizers.js";
 import Nav from "./Nav.js";
+import Footer from "./Footer.js";
+
+const navItemsNames = ["start", "event-details", "aboutus", "contactus"];
 
 const pastEventsData = [
   {
@@ -138,7 +141,8 @@ const organizersData = [
   { name: "Name-18", post: "post-18", image: "./public/people.jpeg" },
 ];
 
-window.nav = new Nav();
+window.nav = new Nav(navItemsNames);
+window.footer = new Footer();
 window.pastEvents = new PastEvents(pastEventsData);
 // window.organizers = new Organizers(organizersData);
 

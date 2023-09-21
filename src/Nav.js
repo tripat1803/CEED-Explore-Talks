@@ -1,5 +1,6 @@
 export default class Nav {
-  constructor() {
+  constructor(navItemsNames) {
+    this.navItemsNames = navItemsNames || [];
     this.nav = document.getElementById("navbar");
     this.prevPos = window.scrollY;
 
@@ -30,18 +31,17 @@ export default class Nav {
 
   updateNavLinks() {
     let navItems = this.nav.getElementsByClassName("nav-item");
-    let navItemsNames = ["start", "event-details", "aboutus", "contactus"];
 
     for (let i = 0; i < navItems.length; i++) {
       navItems[i].classList.remove("active");
     }
-    for (let i = 0; i < navItems.length; i++) {
+    for (let i = 0; i < this.navItemsNames.length; i++) {
       if (
         window.scrollY + this.nav.clientHeight >=
-          document.getElementById(navItemsNames[i]).offsetTop &&
+          document.getElementById(this.navItemsNames[i]).offsetTop &&
         window.scrollY + this.nav.clientHeight <
-          document.getElementById(navItemsNames[i]).clientHeight +
-            document.getElementById(navItemsNames[i]).offsetTop
+          document.getElementById(this.navItemsNames[i]).clientHeight +
+            document.getElementById(this.navItemsNames[i]).offsetTop
       ) {
         navItems[i].classList.add("active");
       }

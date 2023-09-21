@@ -1,6 +1,8 @@
+import Footer from "./Footer.js";
 import Nav from "./Nav.js";
 
 window.nav = new Nav();
+window.footer = new Footer();
 
 document.documentElement.setAttribute("theme", "dark");
 // document.documentElement.setAttribute("theme", "light");
