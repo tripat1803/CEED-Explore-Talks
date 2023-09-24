@@ -113,6 +113,24 @@ h6 {
 
 /* Events */
 #event-dialog-box {
+  top: 0;
+  left: 0;
+  z-index: 105;
+  position: fixed;
+  width: 70vw;
+  height: 90vh;
+  margin-top: 5vh;
+  margin-left: 15vw;
+  background-color: var(--nav-bg-color-1);
+}
+#event-dialog-box .bg {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 0, 0);
 }
 
 #event-detail-box {
@@ -120,8 +138,23 @@ h6 {
   width: 0rem;
   height: 10rem;
   opacity: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: var(--main-color-3) solid 2px;
+  color: var(--text-color-1);
   background-color: var(--bg-color-2);
   transition: width 0.5s ease, opacity 0.5s ease;
+}
+
+#event-detail-box .title {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  border-bottom: var(--text-color-1) solid 2px;
+}
+
+#event-detail-box .discription {
+  font-size: 1rem;
+  padding-left: 1rem;
 }
 
 #events {
@@ -133,11 +166,32 @@ h6 {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+#events .year-box {
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--bg-color-2);
+}
+
+#events .year-box .name {
+  font-size: 4rem;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  color: var(--main-color-1);
+  border-radius: 100%;
+  border: var(--text-color-1) solid 5px;
 }
 
 #events .month-box {
   width: 16rem;
+  margin-bottom: 1rem;
   padding: 0.75rem 1rem 1rem;
   border-radius: 1.5rem;
   background-color: var(--bg-color-2);
